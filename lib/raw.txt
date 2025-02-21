@@ -1,0 +1,10 @@
+ Row(
+                    children: const [
+                      Expanded(child: Divider()),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10),
+                        child: Text("Or Sign up with"),
+                      ),
+                      Expanded(child: Divider()),
+                    ],
+                  ),
