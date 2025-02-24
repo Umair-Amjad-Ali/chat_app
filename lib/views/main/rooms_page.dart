@@ -1,4 +1,3 @@
-// lib/views/main/rooms_page.dart
 import 'package:flutter/material.dart';
 
 class RoomsPage extends StatelessWidget {
@@ -6,7 +5,7 @@ class RoomsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bool isLoading = true; // Set this based on your logic
+    final bool isLoading = true;
 
     if (isLoading) {
       return Center(
