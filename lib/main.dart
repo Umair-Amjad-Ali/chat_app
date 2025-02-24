@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Chat App',
-      initialRoute: AppRoutes.signInScreen,
+      initialRoute: AppRoutes.mainScreen,
       getPages: AppPages.pages,
     );
   }

@@ -1,3 +1,5 @@
+// ignore: file_names
+import 'package:chat_app/constants/app_colors.dart';
 import 'package:chat_app/views/widgets/custom_input_field.dart';
 import 'package:chat_app/views/widgets/social_button.dart';
 import 'package:flutter/gestures.dart';
@@ -41,7 +43,7 @@ class SigninScreen extends StatelessWidget {
               Text(
                 "Enter your email below to continue",
                 style: TextStyle(
-                  color: Colors.grey,
+                  color: AppColors.grey,
                   fontSize: screenWidth * 0.04,
                 ),
               ),
@@ -102,7 +104,7 @@ class SigninScreen extends StatelessWidget {
                             controller.isRememberMeChecked.value = value!;
                           },
                           side: const BorderSide(
-                            color: Color(0xFF4A3AFF),
+                            color: AppColors.primaryBlue,
                             width: 2,
                           ),
                         ),
@@ -123,7 +125,7 @@ class SigninScreen extends StatelessWidget {
                         "Forgot Password",
                         style: TextStyle(
                           fontSize: screenWidth * 0.032,
-                          color: Color(0xFF4A3AFF),
+                          color: AppColors.primaryBlue,
                           // decoration: TextDecoration.underline,
                         ),
                       ),
@@ -193,7 +195,7 @@ class SigninScreen extends StatelessWidget {
                         text: "Sign Up",
                         style: const TextStyle(
                           decoration: TextDecoration.underline,
-                          color: Color(0xFF4A3AFF),
+                          color: AppColors.primaryBlue,
                           fontWeight: FontWeight.bold,
                         ),
                         recognizer: TapGestureRecognizer()

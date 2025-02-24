@@ -1,3 +1,4 @@
+import 'package:chat_app/constants/app_colors.dart';
 import 'package:chat_app/controller/auth/auth_controller.dart';
 import 'package:chat_app/views/widgets/custom_button.dart';
 import 'package:chat_app/views/widgets/custom_input_field.dart';
@@ -5,6 +6,7 @@ import 'package:chat_app/views/widgets/social_button.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+// Import your color file
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -40,7 +42,7 @@ class SignUpScreen extends StatelessWidget {
               Text(
                 "Enter your email below to continue",
                 style: TextStyle(
-                  color: Colors.grey,
+                  color: AppColors.grey,
                   fontSize: screenWidth * 0.04,
                 ),
               ),
@@ -129,13 +131,11 @@ class SignUpScreen extends StatelessWidget {
                       onChanged: (value) {
                         controller.isTermsAccepted.value = value!;
                       },
-                      activeColor: Color(
-                          0xFF4A3AFF), // Change the checkbox fill color to blue
-                      checkColor: Colors.white, // Change the checkmark color
+                      activeColor: AppColors.primaryBlue,
+                      checkColor: AppColors.white,
                       side: const BorderSide(
-                        color:
-                            Color(0xFF4A3AFF), // Set the border color to blue
-                        width: 2, // Adjust border thickness if needed
+                        color: AppColors.primaryBlue,
+                        width: 2,
                       ),
                     ),
                     SizedBox(width: screenWidth * 0.02),
@@ -144,8 +144,7 @@ class SignUpScreen extends StatelessWidget {
                         text: TextSpan(
                           style: TextStyle(
                             fontSize: screenWidth * 0.032,
-                            color: Colors.black,
-                            // Default text color
+                            color: AppColors.black,
                           ),
                           children: [
                             const TextSpan(
@@ -154,8 +153,7 @@ class SignUpScreen extends StatelessWidget {
                               text: "Terms and conditions",
                               style: const TextStyle(
                                 decoration: TextDecoration.underline,
-                                color: Color(
-                                    0xFF4A3AFF), // Make only this part blue
+                                color: AppColors.primaryBlue,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -170,11 +168,13 @@ class SignUpScreen extends StatelessWidget {
 
               SizedBox(height: screenHeight * 0.02),
 
+              // Sign Up Button
               SizedBox(
                 width: double.infinity,
                 child: CustomButton(
                     text: "Sign Up", onPressed: controller.validateSignUpForm),
               ),
+
               // OR Divider
               SizedBox(height: screenHeight * 0.02),
               Row(
@@ -206,7 +206,7 @@ class SignUpScreen extends StatelessWidget {
                       width: screenWidth * 0.035,
                       height: screenHeight * 0.035,
                       onTap: () {
-                        print("Google SignUp Clicked");
+                        print("Apple SignUp Clicked");
                       })
                 ],
               ),
@@ -217,8 +217,7 @@ class SignUpScreen extends StatelessWidget {
                   text: TextSpan(
                     style: TextStyle(
                       fontSize: screenWidth * 0.032,
-                      color: Colors.black,
-                      // Default text color
+                      color: AppColors.black,
                     ),
                     children: [
                       const TextSpan(text: "Already have an account? "),
@@ -226,7 +225,7 @@ class SignUpScreen extends StatelessWidget {
                         text: "Sign In",
                         style: const TextStyle(
                           decoration: TextDecoration.underline,
-                          color: Color(0xFF4A3AFF), // Make only this part blue
+                          color: AppColors.primaryBlue,
                           fontWeight: FontWeight.bold,
                         ),
                         recognizer: TapGestureRecognizer()
