@@ -1,7 +1,8 @@
+import 'package:chat_app/views/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
-class SuccessScreen extends StatelessWidget {
-  const SuccessScreen({super.key});
+class SignupSucess extends StatelessWidget {
+  const SignupSucess({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,15 +13,17 @@ class SuccessScreen extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.08),
+            padding: EdgeInsets.symmetric(
+              horizontal: screenWidth * 0.06,
+            ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  width: screenWidth * 0.2,
-                  height: screenWidth * 0.2,
+                  width: screenWidth * 0.15,
+                  height: screenWidth * 0.15,
                   decoration: BoxDecoration(
-                    color: Colors.blue, // Change to your theme color
+                    color: Color(0xFF4A3AFF),
                     shape: BoxShape.circle,
                   ),
                   child: Icon(
@@ -29,17 +32,17 @@ class SuccessScreen extends StatelessWidget {
                     size: screenWidth * 0.1,
                   ),
                 ),
-                SizedBox(height: screenHeight * 0.03),
+                SizedBox(height: screenHeight * 0.015),
                 Text(
                   "Account created successfully!",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: screenWidth * 0.05,
-                    fontWeight: FontWeight.bold,
+                    fontSize: screenWidth * 0.06,
+                    fontWeight: FontWeight.normal,
                     color: Colors.black,
                   ),
                 ),
-                SizedBox(height: screenHeight * 0.015),
+                SizedBox(height: screenHeight * 0.008),
                 Text(
                   "We're thrilled to have you here. Explore the new era of messaging.",
                   textAlign: TextAlign.center,
@@ -48,29 +51,10 @@ class SuccessScreen extends StatelessWidget {
                     color: Colors.grey[700],
                   ),
                 ),
-                SizedBox(height: screenHeight * 0.04),
+                SizedBox(height: screenHeight * 0.015),
                 SizedBox(
-                  width: screenWidth * 0.6,
-                  height: screenHeight * 0.06,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor:
-                          Colors.blue, // Change to your theme color
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                    ),
-                    onPressed: () {
-                      // Navigate to next screen
-                    },
-                    child: Text(
-                      "Continue",
-                      style: TextStyle(
-                        fontSize: screenWidth * 0.045,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
+                  width: double.infinity,
+                  child: CustomButton(text: "Get Started", onPressed: () {}),
                 ),
               ],
             ),

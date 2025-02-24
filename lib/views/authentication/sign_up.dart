@@ -173,8 +173,7 @@ class SignUpScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: CustomButton(
-                    text: "Get Started",
-                    onPressed: controller.validateSignUpForm),
+                    text: "Sign Up", onPressed: controller.validateSignUpForm),
               ),
               // OR Divider
               SizedBox(height: screenHeight * 0.02),

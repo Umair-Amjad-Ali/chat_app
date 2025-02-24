@@ -15,6 +15,10 @@ class AppPages {
       page: () => SignUpScreen(),
     ),
     GetPage(
+      name: AppRoutes.signUpSucess,
+      page: () => SignUpScreen(),
+    ),
+    GetPage(
       name: AppRoutes.signInScreen,
       page: () => SigninScreen(),
     ),
