@@ -1,5 +1,6 @@
 import 'package:chat_app/views/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SignupSucess extends StatelessWidget {
   const SignupSucess({super.key});
@@ -54,7 +55,11 @@ class SignupSucess extends StatelessWidget {
                 SizedBox(height: screenHeight * 0.015),
                 SizedBox(
                   width: double.infinity,
-                  child: CustomButton(text: "Get Started", onPressed: () {}),
+                  child: CustomButton(
+                      text: "Get Started",
+                      onPressed: () {
+                        Get.offNamed("/signInScreen");
+                      }),
                 ),
               ],
             ),

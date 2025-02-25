@@ -3,6 +3,7 @@ import 'package:chat_app/views/authentication/Signin_screen.dart';
 import 'package:chat_app/views/authentication/email_sucess.dart';
 import 'package:chat_app/views/authentication/forgot_password.dart';
 import 'package:chat_app/views/authentication/sign_up.dart';
+import 'package:chat_app/views/authentication/signup_sucess.dart';
 import 'package:chat_app/views/main/chat_page.dart';
 import 'package:chat_app/views/main/events_page.dart';
 import 'package:chat_app/views/main/leaderboard_page.dart';
@@ -25,7 +26,7 @@ class AppPages {
     ),
     GetPage(
       name: AppRoutes.signUpSucess,
-      page: () => SignUpScreen(),
+      page: () => SignupSucess(),
     ),
     GetPage(
       name: AppRoutes.signInScreen,
